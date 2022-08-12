@@ -1,5 +1,8 @@
+# Layout
 ![Alt text](/public/images/feature.png "Optional title")
-
+# Skill
+React + Tailwind CSS + Zustand
+# Feature
 *	Show content list with name, ingredients, price and the photo
 *	Convert the ingredients to a text in this format
 (A food with 3 or more ingredients will be “Ingredient A, Ingredient B & Ingredient C”; A food with 2 ingredients will be “Ingredient A & Ingredient B”)
