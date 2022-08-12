@@ -1,10 +1,14 @@
-Setup step:
+![Alt text](/public/images/feature.png "Optional title")
 
-1.  In order to start the coding, you will first have to install Node.js and NPM on your OS
-2.  Download the frontend build tool from the zip file here
-3.  Navigate to the directory unzipped and start a shell or command prompt
-4.  Run command `npm install` to install dependencies
-5.  Run command `npm run dev` to start the development server
-6.  Start coding and see the webpage at http://localhost:3000. Image relative path in mockdata.js could be used directly.
-7.  When you have finish, please delete the `node_modules` folder, and zip the whole project
-8.  Send back the zip file to us
+*	Show content list with name, ingredients, price and the photo
+*	Convert the ingredients to a text in this format
+(A food with 3 or more ingredients will be “Ingredient A, Ingredient B & Ingredient C”; A food with 2 ingredients will be “Ingredient A & Ingredient B”)
+*	Filter items by matching the search keyword with name or ingredient
+* Hide the checkout button in the filtered list
+*	Add component for controlling the quantity
+*	When the quantity is changed, update the total price next to the checkout button
+*	The quantity also shown in the filtered list
+
+
+
+To be continued .. 
