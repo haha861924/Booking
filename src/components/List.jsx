@@ -45,36 +45,42 @@ function List() {
   };
 
   return (
-    <>
+    <div className="group pb-40 w-full">
       {filter.map((item, index) => (
         <div
           key={item.name}
-          className="flex space-x-10 text-3xl border-b-4 border-gray-300 mt-5"
+          className="flex space-x-5 lg:text-3xl text-lg border-b-4 last:border-b-0 border-gray-300 py-3 w-full"
         >
           <img
             src={item.image}
-            className="w-96 h-80 object-cover rounded mb-5 min-h-96"
+            className="w-96 h-96 object-cover rounded flex-none max-w-[7rem] max-h-28"
           />
 
-          <div className="flex-col space-y-5">
-            <span className="font-bold">{item.name}</span>
-            <p className="text-gray-400 text-2xl">
-              {Utils.ingredients(item.ingredients)}
-            </p>
-            <div className="mt-80 flex-row space-x-20">
-              <span>HK$ &nbsp;&nbsp; {Utils.dollars(item.price)}</span>
-              <button onClick={() => order.reduce(item, index)}>-</button>
-              <input
-                value={item.count}
-                onChange={(e) => order.type(e, item)}
-                className="w-16 outline-3 border border-gray-500 px-2 py-2 text-center"
-              />
-              <button onClick={() => order.add(item, index)}>+</button>
+          <div className="flex flex-col space-y-5 flex-1 min-w-0">
+            <div className="flex-1">
+              <span className="font-bold">{item.name}</span>
+              <p className="text-gray-400 lg:text-2xl text-base overflow-ellipsis overflow-hidden whitespace-nowrap">
+                {Utils.ingredients(item.ingredients)}
+              </p>
+            </div>
+            <div className="mt-80 flex flex-row flex-none min-w-0 items-center pb-3">
+              <div className="flex-1">
+                <span>HK$ &nbsp;&nbsp; {Utils.dollars(item.price)}</span>
+              </div>
+              <div className="flex-none flex items-center">
+                <button className="w-8 h-8 bg-yellow-400 flex-none text-white font-bold rounded-full" onClick={() => order.reduce(item, index)}>-</button>
+                <input
+                  value={item.count}
+                  onChange={(e) => order.type(e, item)}
+                  className="w-8 h-8 outline-3 border border-gray-500 p-0 text-center mx-1"
+                />
+                <button className=" w-8 h-8 bg-yellow-400 flex-none text-white font-bold rounded-full" onClick={() => order.add(item, index)}>+</button>
+              </div>
             </div>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 

@@ -14,7 +14,7 @@ function Checkout() {
   return (
     <>
       {!query && (
-        <button className="fixed bottom-0 left-0 z-20 w-full bg-yellow-400 p-8 text-white text-3xl hover:bg-yellow-200 hover:text-gray-700">
+        <button className="fixed bottom-0 left-0 z-20 w-full bg-yellow-400 p-4 text-white text-2xl hover:bg-yellow-200 hover:text-gray-700 flex justify-center items-center">
           Checkout {!!cost && <span>(HK$ {Utils.dollars(cost)})</span>}
         </button>
       )}
