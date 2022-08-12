@@ -1,6 +1,6 @@
 import React from "react";
 import Checkout from "./components/Checkout";
-import List from "./components/list";
+import List from "./components/List";
 import Search from "./components/Search";
 
 function App() {
