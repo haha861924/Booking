@@ -9,7 +9,7 @@ function Search() {
 
   return (
     <input
-      className="w-full border-4 border-gray-200 p-4 rounded-xl mb-10"
+      className="w-full border-4 border-gray-200 p-2 rounded-xl"
       placeholder="Search item"
       onChange={filterData}
     />
